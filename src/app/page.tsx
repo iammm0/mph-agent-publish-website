@@ -7,7 +7,6 @@ import {
   LayoutGrid,
   Brain,
   Sparkles,
-  ArrowRight,
   Download,
   Terminal,
   Shield,
@@ -44,22 +43,27 @@ export default function Home() {
             内置<b>技能库 (Skills)</b>、<b>案例库</b>、<b>讨论模式</b>与<b>分阶段规划</b>，
             配合 EventBus 流式事件反馈，覆盖从需求理解到求解分析的完整流程。
           </p>
-          <div className="mt-10 flex flex-wrap gap-4">
+          <div className="mt-6 rounded-lg border border-[color:var(--border)] bg-[color:var(--accent)]/5 px-4 py-3 text-sm subtle max-w-2xl">
+            <b>⚠️ 尚未发布稳定版本：</b> mph-agent 仍在快速迭代中，目前还没有发布稳定的预编译版本。
+            想要尝鲜的用户，请<b>克隆项目源码</b>在本地运行（见下方 <Link href="/#quickstart" className="underline">快速开始</Link>）。
+          </div>
+          <div className="mt-6 flex flex-wrap gap-4">
+            <Link
+              href="/#quickstart"
+              className="inline-flex items-center gap-2 rounded-xl cta-primary px-5 py-3 text-sm font-medium"
+            >
+              <Terminal className="w-4 h-4" />
+              从源码运行
+            </Link>
             <a
               href="https://github.com/iammm0/mph-agent/releases"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl cta-primary px-5 py-3 text-sm font-medium"
-            >
-              <Download className="w-4 h-4" />
-              下载桌面版 (Windows)
-            </a>
-            <Link
-              href="/#quickstart"
               className="inline-flex items-center gap-2 rounded-xl cta-ghost px-5 py-3 text-sm"
             >
-              从源码运行 <ArrowRight className="w-4 h-4" />
-            </Link>
+              <Download className="w-4 h-4" />
+              Releases（暂无稳定版）
+            </a>
             <a
               href="https://github.com/iammm0/mph-agent"
               target="_blank"
@@ -248,7 +252,7 @@ export default function Home() {
       <section id="quickstart" className="mx-auto max-w-7xl px-6 py-24 border-t border-[color:var(--border)]">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[color:var(--fg)]">快速开始</h2>
         <p className="muted max-w-2xl mb-12">
-          推荐直接下载 Windows 桌面安装包；也可以从源码运行，自带 Python API。
+          当前版本还未发布稳定的预编译包，请通过以下步骤从源码运行，自带 Python API。
         </p>
         <div className="grid md:grid-cols-2 gap-8">
           <div>
